@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Energy glitch · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+html, body { height: 100%; }
+  body { padding: 0; background: #000; }
+  insigne-slider { height: 100%; --ins-accent: #d4ff3a; }
+  .shade { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,.75), transparent 55%); }
+  .copy { position: absolute; left: clamp(18px, 5vw, 64px); right: clamp(18px, 5vw, 64px); bottom: clamp(44px, 10%, 90px); color: #fff; }
+  h2 { margin: 0; font: 900 clamp(44px, 11vw, 150px)/.85 system-ui, sans-serif; letter-spacing: -.06em; text-transform: uppercase; }
+  .tag { display: inline-block; margin-bottom: 14px; padding: 6px 10px; background: #d4ff3a; color: #000; font: 700 12px ui-monospace, Menlo, monospace; letter-spacing: .1em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<!-- RGB glitch WebGL transitions, scanlines and scattered glitch typography. -->
+<insigne-slider height="fill" effect="rgb-glitch" speed="900" overlay="scanlines" autoplay="4500" pagination="progress" arrows="hover">
+  <div>
+    <img data-bg src="https://picsum.photos/id/1048/2000/1300" alt="Glass skyscrapers from below">
+    <div class="shade"></div>
+    <div class="copy"><span class="tag" data-in="glitch-text">Zero point</span><h2 data-in="glitch-text">Charge up</h2></div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/1033/2000/1300" alt="Empty highway at night">
+    <div class="shade"></div>
+    <div class="copy"><span class="tag" data-in="glitch-text">Night shift</span><h2 data-in="glitch-text">No limits</h2></div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/1031/2000/1300" alt="Bridge cables in perspective">
+    <div class="shade"></div>
+    <div class="copy"><span class="tag" data-in="glitch-text">Launch</span><h2 data-in="glitch-text">Full voltage</h2></div>
+  </div>
+</insigne-slider>
+
+</body>
+</html>

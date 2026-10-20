@@ -1,0 +1,22 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes: { label: Version, placeholder: "1.0.0" }
+    validations: { required: true }
+  - type: input
+    id: browser
+    attributes: { label: Browser and OS, placeholder: "Chrome 141, macOS 15" }
+    validations: { required: true }
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: A playground link (https://slider.sadiksefa.com.tr/playground/ → Share) or a minimal HTML page.
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes: { label: Expected and actual behavior }
+    validations: { required: true }

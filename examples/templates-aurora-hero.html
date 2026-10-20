@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aurora hero · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+html, body { height: 100%; }
+  body { padding: 0; background: #0d0d0c; }
+  insigne-slider { height: 100%; --ins-arrow-bg: rgba(13,13,12,.55); --ins-arrow-fg: #f3f1ec; }
+  .shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,8,7,.7) 0%, rgba(8,8,7,.15) 60%), linear-gradient(0deg, rgba(8,8,7,.5), transparent 40%); }
+  .copy { position: absolute; left: clamp(20px, 7vw, 96px); bottom: clamp(48px, 14%, 120px); max-width: min(620px, 84%); color: #f3f1ec; }
+  .kicker { font: 500 12px/1 ui-monospace, Menlo, monospace; letter-spacing: .2em; text-transform: uppercase; color: #d9c08a; }
+  h1 { margin: 18px 0 18px; font: 400 clamp(36px, 7vw, 92px)/.96 system-ui, sans-serif; letter-spacing: -.045em; }
+  p { margin: 0 0 28px; font: 17px/1.55 system-ui, sans-serif; color: rgba(243,241,236,.82); max-width: 460px; }
+  .cta { display: inline-flex; gap: 10px; align-items: center; height: 46px; padding: 0 22px; border-radius: 99px; background: #f3f1ec; color: #0d0d0c; font: 600 15px system-ui; text-decoration: none; }
+</style>
+</head>
+<body>
+<insigne-slider height="fill" effect="fade" speed="1100" autoplay="7000" ken-burns="alternate" overlay="beams"
+  pagination="fraction" arrows="hover" aria-label="Expeditions">
+  <div>
+    <img data-bg src="https://picsum.photos/id/1018/2000/1300" alt="Mountain ridge above the clouds" data-focus="55% 60%">
+    <div class="shade"></div>
+    <div class="copy">
+      <span class="kicker" data-in="fade">Expedition 01 · Highlands</span>
+      <h1 data-in="chars-up">Above the weather.</h1>
+      <p data-in="rise">Eight days on the ridge line, where the clouds are something you look down on.</p>
+      <a class="cta" href="#" data-in="rise">Plan the route →</a>
+    </div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/1015/2000/1300" alt="Fjord between steep mountains" data-focus="62% 45%">
+    <div class="shade"></div>
+    <div class="copy">
+      <span class="kicker" data-in="fade">Expedition 02 · Fjords</span>
+      <h1 data-in="lines-up">Water as still as glass.</h1>
+      <p data-in="rise">Kayak the quiet arms of the north, two hundred metres below the cliffs.</p>
+      <a class="cta" href="#" data-in="rise">See the season →</a>
+    </div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/1022/2000/1300" alt="Northern lights over a forest" data-focus="50% 35%">
+    <div class="shade"></div>
+    <div class="copy">
+      <span class="kicker" data-in="fade">Expedition 03 · Arctic</span>
+      <h1 data-in="chars-blur">Nights that glow.</h1>
+      <p data-in="rise">Winter camps under the aurora, far from every light but ours.</p>
+      <a class="cta" href="#" data-in="rise">Join the winter list →</a>
+    </div>
+  </div>
+</insigne-slider>
+
+</body>
+</html>

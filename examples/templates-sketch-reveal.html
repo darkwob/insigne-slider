@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sketch to product · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+html, body { height: 100%; }
+  body { padding: 0; background: #f3f1ec; }
+  insigne-slider { height: 100%; --ins-pag-fg: #121210; }
+  .card { position: absolute; right: clamp(16px, 5vw, 64px); bottom: clamp(48px, 12%, 96px); width: min(360px, 82%); padding: 22px 24px; background: rgba(251,250,247,.92); backdrop-filter: blur(10px); border-radius: 14px; color: #121210; }
+  .step { font: 500 11.5px ui-monospace, Menlo, monospace; letter-spacing: .16em; text-transform: uppercase; color: #8a6420; }
+  h2 { font: 450 clamp(24px, 3.4vw, 38px)/1.05 system-ui; letter-spacing: -.03em; margin: 10px 0 8px; }
+  p { margin: 0; font: 15px/1.55 system-ui; color: #57554f; }
+</style>
+</head>
+<body>
+<!-- "sketch" turns the incoming slide from a pencil drawing into the photo; "develop" finishes the color. -->
+<insigne-slider height="fill" effect="sketch" speed="1400" image-in="develop" autoplay="7000" pagination="fraction" pagination-placement="inside" arrows="hover">
+  <div>
+    <img data-bg src="https://picsum.photos/id/21/1800/1200" alt="Red heeled shoes" data-focus="45% 50%">
+    <div class="card">
+      <span class="step" data-in="fade">01 · Sketch</span>
+      <h2 data-in="lines-up">It starts on paper.</h2>
+      <p data-in="rise">Every pair begins as forty quick drawings and one that stays.</p>
+    </div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/26/1800/1200" alt="Flat lay of travel essentials" data-focus="50% 50%">
+    <div class="card">
+      <span class="step" data-in="fade">02 · Material</span>
+      <h2 data-in="lines-up">Then it gets a texture.</h2>
+      <p data-in="rise">Leather, canvas and brass, chosen for how they age.</p>
+    </div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/36/1800/1200" alt="Objects arranged on a desk" data-focus="50% 50%">
+    <div class="card">
+      <span class="step" data-in="fade">03 · Product</span>
+      <h2 data-in="lines-up">And finally, a thing.</h2>
+      <p data-in="rise">Finished by hand, photographed exactly as it ships.</p>
+    </div>
+  </div>
+</insigne-slider>
+
+</body>
+</html>

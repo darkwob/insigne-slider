@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scroll-driven story · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+body { padding: 0; background: #0d0d0c; color: #ece9e2; font-family: system-ui, sans-serif; }
+  .intro, .outro { min-height: 70vh; display: grid; place-content: center; text-align: center; padding: 0 8%; }
+  .intro h1 { margin: 0; font: 450 clamp(32px, 6vw, 72px)/1 system-ui; letter-spacing: -.04em; }
+  .intro p, .outro p { color: #a7a39a; }
+  .track { height: 320vh; }
+  .sticky { position: sticky; top: 0; height: 100vh; }
+  insigne-slider { height: 100%; }
+  .copy { position: absolute; left: 7%; bottom: 12%; color: #fff; text-shadow: 0 2px 20px rgba(0,0,0,.4); }
+  .copy h2 { margin: 0; font: 450 clamp(30px, 5.5vw, 70px)/1 system-ui; letter-spacing: -.04em; }
+</style>
+</head>
+<body>
+<section class="intro"><h1>Scroll to travel</h1><p>The slider below is driven by the page scroll.</p></section>
+
+<div class="track">
+  <div class="sticky">
+    <!-- scrollDrive: the scroll position moves the slides; the slider glides toward it. -->
+    <insigne-slider height="fill" scroll-drive effect="parallax" loop="off" drag="false" pagination="progress" arrows="hidden" autoplay="false">
+      <div><img data-bg src="https://picsum.photos/id/1018/2000/1300" alt="Mountains"><div class="copy"><h2>Morning</h2></div></div>
+      <div><img data-bg src="https://picsum.photos/id/1015/2000/1300" alt="Fjord"><div class="copy"><h2>Noon</h2></div></div>
+      <div><img data-bg src="https://picsum.photos/id/1016/2000/1300" alt="Canyon"><div class="copy"><h2>Dusk</h2></div></div>
+      <div><img data-bg src="https://picsum.photos/id/903/2000/1300" alt="Night sky"><div class="copy"><h2>Night</h2></div></div>
+    </insigne-slider>
+  </div>
+</div>
+
+<section class="outro"><p>The end. Scroll back up to rewind.</p></section>
+
+</body>
+</html>

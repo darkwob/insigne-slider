@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JavaScript API · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+
+</style>
+</head>
+<body>
+<div id="hero">
+  <div><img data-bg src="https://picsum.photos/id/1011/1600/1000" alt="Canoe on a lake"></div>
+  <div><img data-bg src="https://picsum.photos/id/1039/1600/1000" alt="Waterfall"></div>
+  <div><img data-bg src="https://picsum.photos/id/1044/1600/1000" alt="Coast"></div>
+</div>
+<p><button id="prev">Prev</button> <button id="next">Next</button> <span id="out"></span></p>
+<script type="module">
+const slider = new InsigneSlider('#hero', {
+    effect: 'iris',
+    loop: 'rewind',
+    autoplay: 4000,
+    arrows: 'hidden',
+  });
+  document.querySelector('#prev').onclick = () => slider.prev();
+  document.querySelector('#next').onclick = () => slider.next();
+  slider.on('change', ({ index }) => (document.querySelector('#out').textContent = `Slide ${index + 1} / ${slider.count}`));
+</script>
+</body>
+</html>

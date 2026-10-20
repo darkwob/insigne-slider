@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Starry parallax zoom · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+html, body { height: 100%; }
+  body { padding: 0; background: #060607; }
+  insigne-slider { height: 100%; }
+  .copy { position: absolute; left: clamp(20px, 7vw, 96px); bottom: clamp(56px, 15%, 130px); color: #f2f0ea; max-width: 80%; }
+  h2 { margin: 0; font: 400 clamp(40px, 8vw, 110px)/.92 Georgia, 'Times New Roman', serif; font-style: italic; letter-spacing: -.02em; }
+  p { margin: 14px 0 0; font: 15px/1.5 system-ui; color: rgba(242,240,234,.75); }
+</style>
+</head>
+<body>
+<!-- "depth-zoom" slowly zooms each background for the whole slide; the title drifts with data-parallax. -->
+<insigne-slider height="fill" effect="fade" speed="1600" image-in="depth-zoom" particles="stars" particle-density=".7"
+  autoplay="7000" pagination="fraction" arrows="hover">
+  <div>
+    <img data-bg src="https://picsum.photos/id/903/2000/1300" alt="Night sky full of stars" data-focus="50% 40%">
+    <div class="copy" data-parallax="-20%"><h2 data-in="words-blur" data-split="words">Starry night</h2><p data-in="rise">Look up long enough and it moves.</p></div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/1016/2000/1300" alt="Canyon at dusk" data-focus="50% 50%">
+    <div class="copy" data-parallax="-20%"><h2 data-in="words-blur" data-split="words">Slow horizons</h2><p data-in="rise">Some places only open up at the end of the day.</p></div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/1018/2000/1300" alt="Mountains under clouds" data-focus="50% 55%">
+    <div class="copy" data-parallax="-20%"><h2 data-in="words-blur" data-split="words">Into the quiet</h2><p data-in="rise">Altitude has a sound. It is mostly wind.</p></div>
+  </div>
+</insigne-slider>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vertical story · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+html, body { height: 100%; }
+  body { padding: 0; background: #0d0d0c; }
+  insigne-slider { height: 100%; }
+  .shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(13,13,12,.7), transparent 60%); }
+  .copy { position: absolute; left: clamp(20px, 7vw, 96px); top: 50%; transform: translateY(-50%); color: #f3f1ec; max-width: 80%; }
+  .n { font: 500 13px ui-monospace, Menlo, monospace; color: #c9a35b; letter-spacing: .1em; }
+  h2 { margin: 10px 0 0; font: 450 clamp(36px, 7vw, 92px)/.95 system-ui; letter-spacing: -.045em; }
+  .hint { position: absolute; right: 22px; bottom: 22px; font: 12px ui-monospace, Menlo, monospace; color: rgba(243,241,236,.6); letter-spacing: .1em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<!-- Vertical slides, mouse wheel and keyboard (arrows / PageUp / PageDown). -->
+<insigne-slider height="fill" direction="vertical" effect="slide" speed="900" ease="expo.inOut" mousewheel keyboard parallax pagination="dots" arrows="hidden" loop="off">
+  <div>
+    <img data-bg src="https://picsum.photos/id/1016/2000/1300" alt="Canyon">
+    <div class="shade"></div>
+    <div class="copy" data-parallax="40%"><span class="n">01</span><h2 data-in="lines-up">Scroll down.</h2></div>
+    <span class="hint">Wheel · arrows</span>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/1037/2000/1300" alt="Forest">
+    <div class="shade"></div>
+    <div class="copy" data-parallax="40%"><span class="n">02</span><h2 data-in="lines-up">One idea per screen.</h2></div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/1040/2000/1300" alt="Castle on a hill">
+    <div class="shade"></div>
+    <div class="copy" data-parallax="40%"><span class="n">03</span><h2 data-in="lines-up">The page scrolls on at the end.</h2></div>
+  </div>
+</insigne-slider>
+
+</body>
+</html>

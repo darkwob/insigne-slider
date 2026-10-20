@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elegant lines · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+html, body { height: 100%; }
+  body { padding: 0; background: #f4efe8; }
+  insigne-slider { height: 100%; --ins-pag-fg: #3b2f27; --ins-dot-active: #3b2f27; }
+  .wash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(244,239,232,.95) 0%, rgba(244,239,232,.75) 34%, transparent 62%); }
+  .copy { position: absolute; left: clamp(20px, 7vw, 96px); top: 50%; transform: translateY(-50%); max-width: min(480px, 70%); color: #3b2f27; }
+  .kicker { font: 500 12px system-ui; letter-spacing: .28em; text-transform: uppercase; color: #9b7a5b; }
+  h2 { margin: 14px 0 18px; font: 400 clamp(36px, 6vw, 80px)/1 Georgia, 'Times New Roman', serif; letter-spacing: -.015em; }
+  p { margin: 0 0 24px; font: 16px/1.6 system-ui; color: #6d5d50; }
+  a { display: inline-block; padding: 12px 22px; border: 1px solid #3b2f27; border-radius: 99px; color: #3b2f27; text-decoration: none; font: 600 14px system-ui; }
+</style>
+</head>
+<body>
+<!-- Soft fades and serif headlines that rise line by line from a mask. -->
+<insigne-slider height="fill" effect="fade" speed="1300" autoplay="6500" ken-burns="zoom-out" ken-burns-scale="1.06" pagination="dots" arrows="hidden">
+  <div>
+    <img data-bg src="https://picsum.photos/id/1027/2000/1300" alt="Portrait of a woman with long hair" data-focus="62% 35%">
+    <div class="wash"></div>
+    <div class="copy"><span class="kicker" data-in="fade">Atelier</span><h2 data-in="lines-up" data-split="lines">Hair that moves the way you do</h2><p data-in="rise">Cuts, color and quiet afternoons.</p><a href="#" data-in="rise">Book a chair</a></div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/64/2000/1300" alt="Woman with sunglasses smiling" data-focus="62% 40%">
+    <div class="wash"></div>
+    <div class="copy"><span class="kicker" data-in="fade">Color</span><h2 data-in="lines-up" data-split="lines">Light, layered, entirely yours</h2><p data-in="rise">Balayage and gloss by appointment.</p><a href="#" data-in="rise">See the palette</a></div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/65/2000/1300" alt="Woman in warm evening light" data-focus="60% 40%">
+    <div class="wash"></div>
+    <div class="copy"><span class="kicker" data-in="fade">Rituals</span><h2 data-in="lines-up" data-split="lines">An hour that belongs to you</h2><p data-in="rise">Scalp care, tea and nothing to do.</p><a href="#" data-in="rise">Discover rituals</a></div>
+  </div>
+</insigne-slider>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Old-school studio · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+html, body { height: 100%; }
+  body { padding: 0; background: #14110e; }
+  insigne-slider { height: 100%; --ins-pag-fg: #e8dcc6; }
+  .shade { position: absolute; inset: 0; background: radial-gradient(90% 80% at 30% 60%, rgba(20,17,14,.2), rgba(20,17,14,.85)); }
+  .copy { position: absolute; left: clamp(20px, 7vw, 90px); top: 50%; transform: translateY(-50%); color: #e8dcc6; max-width: min(540px, 86%); }
+  .est { font: 500 12px Georgia, serif; letter-spacing: .3em; text-transform: uppercase; color: #b8925a; }
+  h2 { margin: 14px 0 16px; font: 400 clamp(38px, 7vw, 86px)/.95 Georgia, 'Times New Roman', serif; letter-spacing: -.01em; }
+  p { margin: 0; font: italic 18px/1.5 Georgia, serif; color: rgba(232,220,198,.8); }
+</style>
+</head>
+<body>
+<!-- Film grain, a sepia "tint" entrance on each photo, and typewriter captions. -->
+<insigne-slider height="fill" effect="fade" speed="1200" overlay="grain" image-in="tint" autoplay="7000" pagination="fraction" arrows="hover">
+  <div>
+    <img data-bg src="https://picsum.photos/id/453/2000/1300" alt="Musician playing guitar in black and white" data-focus="55% 40%">
+    <div class="shade"></div>
+    <div class="copy"><span class="est" data-in="fade">Est. 1987</span><h2 data-in="lines-up">Old soul, steady hand.</h2><p data-in="typewriter" data-split="chars">Walk-ins welcome after six.</p></div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/39/2000/1300" alt="Record player close-up" data-focus="50% 50%">
+    <div class="shade"></div>
+    <div class="copy"><span class="est" data-in="fade">The studio</span><h2 data-in="lines-up">Vinyl on, needles ready.</h2><p data-in="typewriter" data-split="chars">Four artists, one long table.</p></div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/1001/2000/1300" alt="Person walking on a beach" data-focus="45% 50%">
+    <div class="shade"></div>
+    <div class="copy"><span class="est" data-in="fade">Flash days</span><h2 data-in="lines-up">Pick a page, wear it home.</h2><p data-in="typewriter" data-split="chars">Every first Saturday.</p></div>
+  </div>
+</insigne-slider>
+
+</body>
+</html>

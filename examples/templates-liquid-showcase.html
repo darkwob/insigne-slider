@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Liquid showcase · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+html, body { height: 100%; }
+  body { padding: 0; background: #0d0d0c; }
+  insigne-slider { height: 100%; }
+  .copy { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; color: #fff; padding: 0 6%; }
+  h2 { margin: 0; font: 450 clamp(40px, 9vw, 128px)/.92 system-ui, sans-serif; letter-spacing: -.05em; text-shadow: 0 10px 40px rgba(0,0,0,.25); }
+  small { display: block; margin-top: 20px; font: 500 12px ui-monospace, Menlo, monospace; letter-spacing: .2em; text-transform: uppercase; opacity: .85; }
+</style>
+</head>
+<body>
+<!-- WebGL liquid transition; titles float and lift on hover (recipe "float"). Click anywhere to start the ripple there. -->
+<insigne-slider height="fill" effect="liquid" speed="1300" autoplay="6000" shader-intensity="1.1" pagination="dots" arrows="hover">
+  <div>
+    <img data-bg src="https://picsum.photos/id/1069/2000/1300" alt="Orange jellyfish in blue water" data-focus="45% 45%">
+    <div class="copy"><h2 data-in="float">Drift</h2><small data-in="fade">Collection 01</small></div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/1041/2000/1300" alt="Deep blue ocean waves">
+    <div class="copy"><h2 data-in="float">Depth</h2><small data-in="fade">Collection 02</small></div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/1035/2000/1300" alt="Waterfall in a canyon">
+    <div class="copy"><h2 data-in="float">Flow</h2><small data-in="fade">Collection 03</small></div>
+  </div>
+</insigne-slider>
+
+</body>
+</html>

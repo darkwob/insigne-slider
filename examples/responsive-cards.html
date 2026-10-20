@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Responsive cards (minSlideWidth) · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+.card { background: #fff; border: 1px solid #e2ded5; border-radius: 14px; overflow: hidden; }
+  .card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .card div { padding: 14px 16px 16px; }
+  .card h3 { margin: 0 0 4px; font-size: 16px; }
+  .card p { margin: 0; color: #6b6860; font-size: 14px; }
+</style>
+</head>
+<body>
+<!-- No breakpoints: as many 220px+ cards as fit the container. Resize the preview. -->
+<insigne-slider min-slide-width="220" space-between="16" loop="off" height="content"
+  pagination="dots" pagination-placement="outside" arrows="visible">
+  <article class="card"><img src="https://picsum.photos/id/1025/600/450" alt="Pug"><div><h3>Pug</h3><p>Loves blankets</p></div></article>
+  <article class="card"><img src="https://picsum.photos/id/1074/600/450" alt="Lioness"><div><h3>Lioness</h3><p>Watching closely</p></div></article>
+  <article class="card"><img src="https://picsum.photos/id/1084/600/450" alt="Walruses"><div><h3>Walruses</h3><p>Beach day</p></div></article>
+  <article class="card"><img src="https://picsum.photos/id/1069/600/450" alt="Jellyfish"><div><h3>Jellyfish</h3><p>Drifting</p></div></article>
+  <article class="card"><img src="https://picsum.photos/id/1080/600/450" alt="Strawberries"><div><h3>Berries</h3><p>Fresh picked</p></div></article>
+  <article class="card"><img src="https://picsum.photos/id/1050/600/450" alt="Sea"><div><h3>Sea</h3><p>Calm water</p></div></article>
+</insigne-slider>
+
+</body>
+</html>

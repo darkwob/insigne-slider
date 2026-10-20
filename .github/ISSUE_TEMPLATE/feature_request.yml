@@ -1,0 +1,11 @@
+name: Feature request
+description: An effect, option or improvement you would like
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes: { label: What do you want to build?, description: Describe the result, link an example if you have one. }
+    validations: { required: true }
+  - type: textarea
+    id: idea
+    attributes: { label: How could it look in the API? }
