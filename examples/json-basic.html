@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>From JSON · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+body { padding: 0; }
+  .title { position: absolute; left: 6%; bottom: 16%; margin: 0; color: #fff; font-size: clamp(28px, 5vw, 56px); text-shadow: 0 2px 20px rgba(0,0,0,.35); }
+  .sub { position: absolute; left: 6%; bottom: 9%; margin: 0; color: #fff; opacity: .9; }
+</style>
+</head>
+<body>
+<div id="hero"></div>
+<script type="module">
+InsigneSlider.create('#hero', {
+    effect: 'liquid',          // a WebGL effect: loaded only because it is used
+    autoplay: 5000,
+    slides: [
+      {
+        bg: { src: 'https://picsum.photos/id/1069/1800/1200', alt: 'Jellyfish', focus: '45% 40%' },
+        layers: [
+          { tag: 'h2', text: 'Built from JSON', className: 'title', in: 'chars-blur' },
+          { tag: 'p', text: 'Text is set with textContent: safe for CMS data.', className: 'sub', in: 'rise', delay: 300 },
+        ],
+      },
+      {
+        bg: { src: 'https://picsum.photos/id/1050/1800/1200', alt: 'Sea' },
+        layers: [{ tag: 'h2', text: 'One spec, any framework', className: 'title', in: 'zoom' }],
+      },
+    ],
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Coverflow gallery + thumbs · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+body { padding: 24px clamp(12px, 3vw, 32px); background: #0d0d0c; color: #ece9e2; font-family: system-ui, sans-serif; }
+  #thumbs { margin-top: 14px; --ins-radius: 8px; }
+  #thumbs img { cursor: pointer; opacity: .45; transition: opacity .2s cubic-bezier(.23,1,.32,1); border-radius: 8px; }
+  #thumbs .is-thumb-active img { opacity: 1; outline: 2px solid #c9a35b; outline-offset: -2px; }
+  #main { --ins-pag-fg: #ece9e2; }
+</style>
+</head>
+<body>
+<!-- Coverflow main slider, synced both ways with a thumbnail strip (thumbs="#thumbs"). -->
+<insigne-slider id="main" thumbs="#thumbs" effect="coverflow" slides-per-view="1.7" centered space-between="0" height="340"
+  coverflow-rotate="34" coverflow-depth="220" pagination="none" arrows="visible" credit-theme="dark">
+  <img src="https://picsum.photos/id/1018/1200/800" alt="Mountains">
+  <img src="https://picsum.photos/id/1036/1200/800" alt="Snowy forest">
+  <img src="https://picsum.photos/id/1043/1200/800" alt="City street">
+  <img src="https://picsum.photos/id/1050/1200/800" alt="Sea">
+  <img src="https://picsum.photos/id/1039/1200/800" alt="Waterfall">
+  <img src="https://picsum.photos/id/1015/1200/800" alt="Fjord">
+</insigne-slider>
+
+<insigne-slider id="thumbs" min-slide-width="90" space-between="8" height="64" loop="off" pagination="none" arrows="hidden" credit="page">
+  <img src="https://picsum.photos/id/1018/240/160" alt="">
+  <img src="https://picsum.photos/id/1036/240/160" alt="">
+  <img src="https://picsum.photos/id/1043/240/160" alt="">
+  <img src="https://picsum.photos/id/1050/240/160" alt="">
+  <img src="https://picsum.photos/id/1039/240/160" alt="">
+  <img src="https://picsum.photos/id/1015/240/160" alt="">
+</insigne-slider>
+
+</body>
+</html>

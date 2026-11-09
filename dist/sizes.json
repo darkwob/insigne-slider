@@ -1,0 +1,62 @@
+[
+  {
+    "file": "insigne-slider.iife.js",
+    "raw": 195690,
+    "gz": 68108,
+    "br": 59272
+  },
+  {
+    "file": "chunks/src-DJsduSjP.js",
+    "raw": 135268,
+    "gz": 45623,
+    "br": 39763
+  },
+  {
+    "file": "chunks/layers-Dya_aUbI.js",
+    "raw": 24494,
+    "gz": 8961,
+    "br": 7964
+  },
+  {
+    "file": "chunks/transition-DN6EXrRg.js",
+    "raw": 18934,
+    "gz": 8062,
+    "br": 7315
+  },
+  {
+    "file": "chunks/atmos-Bdu7A1Rh.js",
+    "raw": 10319,
+    "gz": 4527,
+    "br": 4123
+  },
+  {
+    "file": "chunks/particles-Dql-HoBO.js",
+    "raw": 8232,
+    "gz": 3874,
+    "br": 3458
+  },
+  {
+    "file": "chunks/depth-BolmkEwi.js",
+    "raw": 2861,
+    "gz": 1573,
+    "br": 1438
+  },
+  {
+    "file": "chunks/scroll-CJ6aQ5Pv.js",
+    "raw": 2591,
+    "gz": 1447,
+    "br": 1306
+  },
+  {
+    "file": "insigne-slider.js",
+    "raw": 2153,
+    "gz": 1216,
+    "br": 1095
+  },
+  {
+    "file": "index.js",
+    "raw": 1722,
+    "gz": 1007,
+    "br": 927
+  }
+]

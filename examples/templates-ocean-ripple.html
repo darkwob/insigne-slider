@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ocean ripple · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+html, body { height: 100%; }
+  body { padding: 0; background: #031621; }
+  insigne-slider { height: 100%; }
+  .shade { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(3,22,33,.75), transparent 60%); }
+  .copy { position: absolute; left: clamp(20px, 6vw, 80px); bottom: clamp(48px, 13%, 110px); color: #eaf6fb; max-width: 82%; }
+  small { font: 500 12px ui-monospace, Menlo, monospace; letter-spacing: .2em; text-transform: uppercase; color: #7fd0e6; }
+  h2 { margin: 12px 0 0; font: 500 clamp(34px, 6.5vw, 84px)/.95 system-ui; letter-spacing: -.035em; }
+  p { margin: 14px 0 0; font: 16px/1.5 system-ui; color: rgba(234,246,251,.8); }
+</style>
+</head>
+<body>
+<!-- "water" WebGL transition (starts where you click) with rising bubbles. -->
+<insigne-slider height="fill" effect="water" speed="1500" particles="bubbles" particle-density=".8" autoplay="6500" pagination="dots" arrows="hover">
+  <div>
+    <img data-bg src="https://picsum.photos/id/1050/2000/1300" alt="Calm sea under a pale sky">
+    <div class="shade"></div>
+    <div class="copy"><small data-in="fade">Catch of the day</small><h2 data-in="chars-up">From the open sea</h2><p data-in="rise">Landed at six, on your table by eight.</p></div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/1053/2000/1300" alt="Waves breaking on a rocky shore">
+    <div class="shade"></div>
+    <div class="copy"><small data-in="fade">Shellfish</small><h2 data-in="chars-up">Straight off the rocks</h2><p data-in="rise">Oysters and mussels from the north coast.</p></div>
+  </div>
+  <div>
+    <img data-bg src="https://picsum.photos/id/1041/2000/1300" alt="Deep blue waves">
+    <div class="shade"></div>
+    <div class="copy"><small data-in="fade">Market hours</small><h2 data-in="chars-up">Open with the tide</h2><p data-in="rise">Tuesday to Sunday, 7 am – 2 pm.</p></div>
+  </div>
+</insigne-slider>
+
+</body>
+</html>

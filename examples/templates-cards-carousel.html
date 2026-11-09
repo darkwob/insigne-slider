@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Responsive cards · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+body { padding: 28px clamp(16px, 4vw, 40px); background: #f3f1ec; color: #121210; font-family: system-ui, sans-serif; }
+  .head { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 18px; }
+  .head h2 { margin: 0; font: 500 clamp(24px, 3.4vw, 36px)/1 system-ui; letter-spacing: -.03em; }
+  .head span { font: 12px ui-monospace, Menlo, monospace; letter-spacing: .14em; text-transform: uppercase; color: #8b887f; }
+  .card { display: block; background: #fff; border: 1px solid #e2ded5; border-radius: 16px; overflow: hidden; color: inherit; text-decoration: none; }
+  .card img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; transition: transform .5s cubic-bezier(.23,1,.32,1); }
+  .card:hover img { transform: scale(1.03); }
+  .card .meta { padding: 14px 16px 18px; }
+  .card h3 { margin: 0 0 6px; font: 600 16px system-ui; letter-spacing: -.01em; }
+  .card p { margin: 0; color: #6b6860; font-size: 14px; }
+  .card .price { display: block; margin-top: 10px; font-weight: 600; }
+  insigne-slider { --ins-pag-fg: #121210; --ins-arrow-bg: #121210; --ins-arrow-fg: #f3f1ec; }
+</style>
+</head>
+<body>
+<div class="head"><h2>New this week</h2><span>No breakpoints · resize me</span></div>
+
+<!-- minSlideWidth: as many 230px+ cards as fit. arrows outside, bottom-right. -->
+<insigne-slider min-slide-width="230" space-between="14" loop="off" height="content" free-mode free-mode-sticky
+  pagination="progress" pagination-placement="outside" arrows="visible" arrows-placement="outside" arrows-position="bottom-right">
+  <a class="card" href="#"><img src="https://picsum.photos/id/21/600/750" alt="Red heels"><div class="meta"><h3>Rossa heel</h3><p>Italian leather</p><span class="price">$240</span></div></a>
+  <a class="card" href="#"><img src="https://picsum.photos/id/250/600/750" alt="Film camera"><div class="meta"><h3>Field camera</h3><p>Refurbished, 1978</p><span class="price">$410</span></div></a>
+  <a class="card" href="#"><img src="https://picsum.photos/id/30/600/750" alt="Ceramic mug"><div class="meta"><h3>Studio mug</h3><p>Hand-thrown</p><span class="price">$32</span></div></a>
+  <a class="card" href="#"><img src="https://picsum.photos/id/175/600/750" alt="Wall clock"><div class="meta"><h3>Station clock</h3><p>Brass hands</p><span class="price">$120</span></div></a>
+  <a class="card" href="#"><img src="https://picsum.photos/id/26/600/750" alt="Travel essentials"><div class="meta"><h3>Weekender kit</h3><p>Everything, nothing extra</p><span class="price">$185</span></div></a>
+  <a class="card" href="#"><img src="https://picsum.photos/id/431/600/750" alt="Coffee cup"><div class="meta"><h3>Morning set</h3><p>Two cups, one pot</p><span class="price">$68</span></div></a>
+  <a class="card" href="#"><img src="https://picsum.photos/id/119/600/750" alt="Laptop"><div class="meta"><h3>Desk sleeve</h3><p>Felt and cork</p><span class="price">$54</span></div></a>
+</insigne-slider>
+
+</body>
+</html>

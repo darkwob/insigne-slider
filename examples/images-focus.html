@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smart fit: focus and safe area · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+.row { display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-start; }
+  .row > div { flex: 1 1 160px; }
+  .row p { font: 13px/1.4 system-ui; color: #6b6860; margin: 8px 0 0; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div>
+    <div data-insigne data-height="320" data-fit="cover" data-arrows="hidden" data-pagination="none">
+      <div><img data-bg src="https://slider.sadiksefa.com.tr/img/subject.svg" alt=""></div>
+    </div>
+    <p>fit: cover (centered)</p>
+  </div>
+  <div>
+    <div data-insigne data-height="320" data-arrows="hidden" data-pagination="none">
+      <div><img data-bg src="https://slider.sadiksefa.com.tr/img/subject.svg" alt="" data-focus="20% 55%"></div>
+    </div>
+    <p>data-focus="20% 55%"</p>
+  </div>
+  <div>
+    <div data-insigne data-height="320" data-arrows="hidden" data-pagination="none" style="max-width:200px">
+      <div><img data-bg src="https://slider.sadiksefa.com.tr/img/subject.svg" alt="" data-safe="8 18 34 64"></div>
+    </div>
+    <p>data-safe="8 18 34 64"</p>
+  </div>
+  <div>
+    <div data-insigne data-height="320" data-arrows="hidden" data-pagination="none" style="max-width:150px">
+      <div><img data-bg src="https://slider.sadiksefa.com.tr/img/subject.svg" alt="" data-safe="0 0 60 100"></div>
+    </div>
+    <p>Safe area wider than the frame: zooms out, blurred fill</p>
+  </div>
+</div>
+
+</body>
+</html>

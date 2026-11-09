@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://slider.sadiksefa.com.tr
+    about: Guides, API reference, templates and playground (English / Türkçe).
+  - name: License keys
+    url: https://sadiksefa.dev
+    about: Remove the attribution on your domain.

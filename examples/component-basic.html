@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Web component · Insigne Slider</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/insigne-slider@1/dist/insigne-slider.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:16px;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#14161c;background:#fff}
+
+</style>
+</head>
+<body>
+<insigne-slider effect="cards" slides-per-view="1" pagination="fraction" pagination-placement="outside" height="360">
+  <insigne-slide bg="https://picsum.photos/id/1025/1200/900" alt="Pug in a blanket" focus="50% 40%"></insigne-slide>
+  <insigne-slide bg="https://picsum.photos/id/1074/1200/900" alt="Lioness" focus="45% 35%"></insigne-slide>
+  <insigne-slide bg="https://picsum.photos/id/1084/1200/900" alt="Walruses"></insigne-slide>
+  <insigne-slide bg="https://picsum.photos/id/1069/1200/900" alt="Jellyfish"></insigne-slide>
+</insigne-slider>
+
+</body>
+</html>
